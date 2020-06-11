@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <!-- Codificação -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <!-- Google fonts -->
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Arial">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Local CSS -->
+        <!-- <link rel="stylesheet" href="estilo.css"> -->
+        <style>
+            body {
+                background-color: gray;
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+                animation: efeito 2s;
+                
+            }
+            @keyframes efeito {
+                from {
+                    margin-top: 30px;
+                    opacity: 0;
+                }
+                to {
+                    margin-top: 0px;
+                    opacity: 1;
+                }
+            }
+            header {
+                width: 100%;
+                text-align: center;
+                background-color: black;
+                padding: 5px 0;
+            }
+            #conteudo {
+                /* display: flex;
+                flex-direction: column;
+                width: 90%; */
+                padding: 0;
+                margin: 2% auto;
+                border:1px solid white;
+                border-radius: 20px;
+            }
+            .topico {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                /* border: 1px solid blue; */
+            }
+            .topico-titulo {
+                text-align: center;
+                background-color: aquamarine;
+            }
+            .topico-conteudo {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                
+            }
+            .metade {
+                width: 50%;
+                display: flex;
+                /* border: 1px solid red; */
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                
+            }
+            #musica h2 {
+                margin-top: 40px;
+            }
+            #filme a, #banda a {
+                width: 75%;
+                margin: 2%;
+                border: 3px solid white;
+            }
+            .flavia {
+                /* border: 1px solid green; */
+                background-color: #651f41;
+            }
+            .gustavo {
+                /* border: 1px solid green; */
+                background-color: #262b48;
+            }
+            iframe {
+                /* border: 5px solid yellow; */
+                width: 80% !important;
+                height: 80% !important;
+            }
+
+            button {
+                width: 100%;
+                background-color: black;
+                color: white;
+                border: none;
+                padding: 15px;
+            }
+            
+
+            footer {
+                width: 100%;
+                text-align: center;
+                height: 20%;
+                background-color: pink;
+                margin: auto;
+                
+            }
+        </style>
+
+        <!-- Optional JavaScript Bootstrap -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Ícones -->
+        <script src="https://kit.fontawesome.com/c81f286e1d.js" crossorigin="anonymous"></script>
+
+        <title>TOP 5</title>
+        <link rel="icon" type="imagem/png" href="">
+        
+    </head>
+
+    <body onload="diferenca_dias()">
+
+        <header>
+            <h1>TOP 5</h1>
+            <div id="contador"></div>
+        
+        </header>
+
+        <section class="container" id="conteudo">
+            <div class="topico" id="nomes">
+                <div class="topico-conteudo">
+                    <div class="metade flavia" style="border-top-left-radius: 20px;background-color: rgb(122, 122, 207);" >
+                        <h1>FLÁVIA</h1>
+                    </div>
+                    <div class="metade gustavo" style="border-top-right-radius: 20px;background-color: rgb(122, 122, 207);">
+                        <h1>GUSTAVO</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topico" >
+                <div class="topico-titulo">
+                    <!-- <button type="button" onclick="secao(document.getElementById('musica'))"><h2>MÚSICA</h2></button> -->
+
+                    <button type="button" data-toggle="collapse" data-target="#musica" aria-expanded="false" aria-controls="musica">
+                        <h2>MÚSICA</h2>
+                      </button>
+                </div>
+                
+                <!-- <div class="topico-conteudo" id="musica" > -->
+                <div class="topico-conteudo collapse" id="musica">
+                    <div class="metade flavia" style="background-color: #262b48;">
+                            <h2>Nosso pequeno castelo</h2>
+                            <iframe  src="https://www.youtube.com/embed/wWs2dqKRgdI"></iframe>
+                            <h2>Tarde de outubro</h2>
+                            <iframe  src="https://www.youtube.com/embed/_VvW4ZGU1RA"></iframe>
+                            <h2>João de barro</h2>
+                            <iframe  src="https://www.youtube.com/embed/joML6MiB6HE"></iframe>
+                            <h2>Our day will come</h2>
+                            <iframe  src="https://www.youtube.com/embed/ONw6dh34xXw"></iframe>
+                            <h2>Home</h2>
+                            <iframe  src="https://www.youtube.com/embed/8mVbdjec0pA"></iframe>
+                            
+                    </div>
+                    <div class="metade gustavo" style="background-color: #EBE35C;">
+                            <h2>Pizza</h2>
+                            <iframe  src="https://www.youtube.com/embed/JsKIAO11q1Y"></iframe>
+                            <!-- <h2>Hit the floor</h2>
+                            <iframe  src="https://www.youtube.com/embed/Xjvwq2pjlYo"></iframe> -->
+                            <h2>Lose yourself</h2>
+                            <iframe  src="https://www.youtube.com/embed/6Vxfwl4ZxpM"></iframe>
+                            <h2>Shape of you</h2>
+                            <iframe  src="https://www.youtube.com/embed/Svtr-p4mrQ8"></iframe>
+                            <h2>A luz e a sombra</h2>
+                            <iframe  src="https://www.youtube.com/embed/lwYHWuHF7TI"></iframe>
+                            
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topico" >
+                <div class="topico-titulo">
+                    <!-- <button type="button" onclick="secao(document.getElementById('banda'))"><h2>BANDA</h2></button> -->
+                    <button type="button" data-toggle="collapse" data-target="#banda" aria-expanded="false" aria-controls="banda">
+                        <h2>BANDA</h2>
+                      </button>
+                    
+                </div>
+                <!-- <div class="topico-conteudo" id="banda"> -->
+                <div class="topico-conteudo collapse" id="banda">
+                    <div class="metade flavia" style="background-color: #c7db05;">
+                        <a href="https://pt.wikipedia.org/wiki/CPM_22"><img width="100%;" src="cpm22.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Maroon_5"><img width="100%;" src="maroon-5.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Ed_Sheeran"><img width="100%;" src="ed-sheeran.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Green_Day"><img width="100%;" src="green-day.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Charlie_Brown_Jr."><img width="100%;" src="charlie-brown-jr.jpg" alt=""></a>
+                        
+                    </div>
+                    <div class="metade gustavo" style="background-color: #B900EB;">
+                        <a href="https://pt.wikipedia.org/wiki/Linkin_Park"><img width="100%;" src="linkin-park.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Ed_Sheeran"><img width="100%;" src="ed-sheeran.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Paramore"><img width="100%;" src="paramore.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Pitty"><img width="100%;" src="pitty.jpg" alt=""></a>
+                        
+                        <a href="https://pt.wikipedia.org/wiki/Infected_Mushroom"><img width="100%;" src="infected-mushroom.jpg" alt=""></a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="topico" >
+                <div class="topico-titulo">
+                    <!-- <button type="button" onclick="secao(document.getElementById('filme'))"><h2>FILME</h2></button> -->
+
+                    <button type="button" data-toggle="collapse" data-target="#filme" aria-expanded="false" aria-controls="filme">
+                        <h2>FILME</h2>
+                      </button>
+                    
+                </div>
+                <div class="topico-conteudo collapse" id="filme">
+                    <div class="metade flavia" style="background-color: #db1a3a;">
+                        <a href="https://www.youtube.com/watch?v=lc0UehYemQA"><img width="100%;" src="jurassic-park.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=mfmrPu43DF8"><img width="100%;" src="hunger-games.jpg"></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=zhpwjrbeoJQ"><img width="100%;" src="august-rush.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=5PSNL1qE6VY"><img width="100%;" src="avatar.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=eIcmQNy9FsM"><img width="100%;" src="dirty-dancing.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=k3B2XBcp7vA"><img width="100%;" src="a-walk-to-remember.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=qmd-ej9Hx20"><img width="100%;" src="pride-prejudice.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=dOMTh9Jd81w"><img width="100%;" src="love-rose.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=qvsgGtivCgs"><img width="100%;" src="back-to-the-future.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=bOukvR5ZydQ"><img width="100%;" src="dead-poets-society.jpg" alt=""></a>
+                        
+                    </div>
+                    <div class="metade gustavo" style="background-color: #275CB8;">
+                        <a href="https://www.youtube.com/watch?v=2KnZac176Hs"><img width="100%;" src="matrix.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=-FcK_UiVV40"><img width="100%;" src="predestination.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=KnrRy6kSFF0"><img width="100%;" src="inglourious-basterds.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=1ZdlAg3j8nI"><img width="100%;" src="hp3.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=EXeTwQWrcwY"><img width="100%;" src="batman-dark-knight.jpg" alt=""></a>
+                        
+                        <a href="https://www.youtube.com/watch?v=sF7hAbQR7kk"><img width="100%;" src="budapest.png" alt=""></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="topico" >
+                
+                <div class="topico-conteudo" id="fim">
+                    <div class="metade flavia"  style="height: 20px; border-bottom-left-radius: 20px;background-color: rgb(122, 122, 207);">
+                    </div>
+                    <div class="metade gustavo"  style="height: 20px; border-bottom-right-radius: 20px;background-color: rgb(122, 122, 207);">
+                    </div>
+                </div>
+            </div>
+        
+
+
+        </section>
+
+        
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Local Javascript -->
+        <!-- <script type="text/javascript" src="interacao.js"></script> -->
+        <script>
+            
+            
+            
+
+            
+            function diferenca_dias() {
+                setInterval(function () {
+                var primeiro = new Date("may 14, 2020").getTime();
+                var hoje = new Date().getTime();
+                var diferenca = (hoje - primeiro) / 1000;
+                var dias = parseInt(diferenca / 86400);
+                
+                document.getElementById('contador').innerHTML = `${dias} dias`;
+            }, 1000);
+            }
+
+            
+
+
+            
+        </script>
+
+    </body>
+
+</html>
