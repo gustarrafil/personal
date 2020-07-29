@@ -1,0 +1,99 @@
+* {
+    font-family: 'Noto Sans';
+    /* modern serif para impressao
+    san-serif para pdf */
+}
+a:hover {
+    text-decoration: none;
+}
+
+#pagina {
+    height: 297mm;
+    width: 210mm;
+    background-color: rgb(165, 240, 165);
+}
+
+header {
+    width: 210mm;
+    height: 10mm;
+    background-color: gray;
+}
+
+section {
+    width: 210mm;
+    height: 277mm;
+}
+.metade {
+    display: flex;
+    width: 96mm;
+    /* margin-left: 5mm; */
+}
+#esquerda {
+    background-color: aqua;
+    float: left;
+    flex-direction: column;
+}
+.lateral {
+    height: 277mm;
+    width: 6mm;
+    float: left;
+    background-color: blue;
+}
+#separacao {
+    height: 277mm;
+    width: 6mm;
+    float: left;
+    background-color: blue;
+
+}
+#direita {
+    background-color: rgb(247, 201, 145);
+    float: left;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 25px;
+}
+#formacao h2 {
+    font-size: 16px;
+    text-align: right;
+}
+
+#info-contato {
+    margin-top: 20px;
+}
+.icone {
+    width: 20px;
+}
+
+.item-pessoal {
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+    
+}
+
+
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+h3 {
+    
+    font-size: 17px;
+    font-weight: bold;
+}
+.titulo {
+    border-bottom: 2px solid gray;
+}
+
+p {
+    font-size: 14px;
+}
+
+footer {
+    width: 210mm;
+    height: 10mm;
+    background-color: gray;
+}
