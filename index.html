@@ -6,9 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" type="text/css" href="font/style.css">
+        <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>gustarrafil</title>
@@ -16,8 +21,8 @@
     <body>
     <div class="container-fluid" >
         <div id="nav" class="row position-fixed w-100">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+            <div class="col-12"  style="padding: 0;">
+                <nav id="navegacao" class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#principal">home</a>
@@ -68,7 +73,7 @@
             <section class="row" id="home">
                 <div class="col-1"></div>
                 <div class="col-10">
-                    <div class="row d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center" style="background-color: black;">
                         <h1 class="text-center">Site em construção</h1>
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -129,21 +134,162 @@
 
             <section class="row" id="get-in-touch">
                 <div class="col-1"></div>
-                <div class="col-10">
+                <div class="col-10 d-flex justify-content-center h-75">
                     <!-- foto redonda com form de email, redes sociais e git -->
+
+                    <div class="row w-100">
+                        <div class="col d-flex align-items-center">
+                            <!-- Material form login -->
+<div id="caixa-form" class="card w-100" >
+
+    
+  
+    <!--Card content-->
+    <div class="card-body">
+  
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;" action="#!">
+  
+        <!-- nome -->
+        <div class="md-form">
+          <input type="text" id="materialLoginFormEmail" class="form-control">
+          <label for="materialLoginFormEmail">seu nome</label>
+        </div>
+
+        <!-- Email -->
+        <div class="md-form">
+            <input type="email" id="materialLoginFormEmail" class="form-control">
+            <label for="materialLoginFormEmail">seu e-mail</label>
+        </div>
+
+        <div class="form-group">
+            
+            <textarea placeholder="escreva sua mensagem aqui" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="6"></textarea>
+          </div>
+  
+        
+  
+        
+  
+        <!-- Sign in button -->
+        <button id="send" class="btn btn-outline-info btn-rounded btn-block waves-effect z-depth-0" type="submit" href="mailto:gustavotarrafil@gmail.com">mandar um "oi!"</button>
+  
+        
+      </form>
+      <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form login -->
+
+
+                        </div>
+                        <div class="col">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <img style="width: 60%;border-radius: 50%;" src="london.jpg" alt="">
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <a href="https://twitter.com/gustarrafil"><i class="fab fa-twitter-square"></i></a>
+                                    
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <a href="https://github.com/gustarrafil"><i class="fab fa-github-square"></i></a>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-1"></div>
+
+                
                 
             </section>
 
-            <footer class="row">
-                lala
-            </footer>
-        </div>
-        
+            
         </div>
 
         
+        
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+  
+                <!-- Grid row -->
+                <div class="row">
+  
+                    
+  
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+  
+                        
+  
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://twitter.com/gustarrafil">@gustarrafil</a>
+                            </li>
+                            
+                            
+                        </ul>
+  
+                    </div>
+                    <!-- Grid column -->
+  
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+            
+                        
+                
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://github.com/gustarrafil">/gustarrafil</a>
+                            </li>
+                            
+                        </ul>
+            
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+            
+                        
+                
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="mailto:gustavotarrafil@gmail.com">gustavotarrafil@gmail.com</a>
+                            </li>
+                            
+                            
+                        </ul>
+            
+                    </div>
+                    <!-- Grid column -->
+  
+                </div>
+                <!-- Grid row -->
+  
+            </div>
+            <!-- Footer Links -->
+  
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+  
+    </footer>
+    <!-- Footer -->
 
 
 
