@@ -1,3 +1,47 @@
+* {
+    font-family: 'Product Sans Regular';
+}
 body {
-    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    /* padding: 0 !important; */
+    color: white;
+}
+
+#nav {
+    background-color: #4157C2 !important;
+    position: fixed !important;
+    z-index: 10;
+}
+nav a {  
+    color: white !important;
+}
+
+section {
+    height: 100vh;
+    padding-top: 100px;
+}
+
+#principal {
+    background: linear-gradient(#4157C2, rgb(98, 77, 170));
+    background-repeat: repeat-x;
+
+    padding-top: 56px;
+
+    /* padding: 0 !important; */
+
+    /* height: 100vh; */
+}
+
+
+
+
+footer {
+    background-color: aquamarine;
+    height: 30px;
+    position: relative;
+    bottom: 0;
 }
