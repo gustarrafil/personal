@@ -42,7 +42,6 @@
 
         main {
             margin-top: 56px;
-            
         }
         #pagina {
             transition: 0.5s;
@@ -85,10 +84,12 @@
             display: none;
         }
 
+        
+
 
 
         /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 800px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
                 float: right;
@@ -131,9 +132,13 @@
             float: right;
         } */
 
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 800px) {
             #mySidebar {
                 display: none;
+            }
+            #pagina {
+                margin-right: 0 !important;
+                margin-left: 0 !important;
             }
         }
 
@@ -156,7 +161,7 @@
             <ul>
                 <li><a href="#">home</a></li>
                 <li><a href="#">formação</a></li>
-                <li><a href="#">experiência profissional</a></li>
+                <li><a href="#">experiência<br>profissional</a></li>
                 <li><a href="#">intercâmbio</a></li>
                 <li><a href="#">certificados</a></li>
                 <li><a style="white-space: nowrap;" href="#">curriculo pdf</a></li>
@@ -166,9 +171,9 @@
         </div>
     </div>
 
-    <div  class="container-fluid"  style="height: 2000px;">
+    <div class="container-fluid"  style="height: 2000px;">
 
-        <div id="pagina" >
+        <div id="pagina" style="background-color: white">
             <div class="row">
                 <div class="topnav" id="myTopnav" style="margin: 0;">
                     <a href="#home" class="active">home</a>
@@ -211,36 +216,35 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <script>
+        var tamanho_tela = screen.width;
+
+        
+        
 
 
         function openNav() {
-                
-                
+            if (tamanho_tela <= 800) {
                 document.querySelector("#mySidebar").style.width = "250px";
-                
-                
                 document.querySelector("#pagina").style.marginRight = "250px";
                 document.querySelector("#pagina").style.marginLeft = "-250px";
-            
-        
+            }
         }
 
         function closeNav() {
-            
-                
+            if (tamanho_tela <= 800) {
+                // document.querySelector("#pagina").style.marginRight = "250px";
+                // document.querySelector("#pagina").style.marginLeft = "-250px";
                 document.querySelector("#mySidebar").style.width = "0";
-                
                 document.querySelector("#pagina").style.marginRight = "0";
                 document.querySelector("#pagina").style.marginLeft = "0";
-            
-            
+            } 
         }
+
         
         
-
-
-
+        
         
         
     </script>
