@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 
@@ -24,6 +24,7 @@
     <style>
         :root {
             --azul: #4157C2;
+            --roxo: rgb(98, 77, 170);
         }
         body {
             margin: 0;
@@ -42,9 +43,16 @@
 
         main {
             margin-top: 56px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         #pagina {
             transition: 0.5s;
+            background-image: linear-gradient(var(--azul), var(--roxo));
+        }
+        .container-fluid {
+            padding: 0;
+            overflow-x: hidden;
         }
 
         
@@ -54,7 +62,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: red;
+            background-color: var(--azul);
             color: white;
             text-align: center;
         }
@@ -67,6 +75,7 @@
             overflow: hidden;
             position: fixed; /* Set the navbar to fixed position */
             top: 0; /* Position the navbar at the top of the page */
+            left: 0;
             width: 100%; /* Full width */
         }
         /* Style the links inside the navigation bar */
@@ -142,6 +151,9 @@
             }
         }
 
+        section {
+            height: 2000px;
+        }
         
 
     </style>
@@ -171,19 +183,19 @@
         </div>
     </div>
 
-    <div class="container-fluid"  style="height: 2000px;">
+    <div class="container-fluid">
 
-        <div id="pagina" style="background-color: white">
-            <div class="row">
+        <div id="pagina">
+            <div class="row" >
                 <div class="topnav" id="myTopnav" style="margin: 0;">
                     <a href="#home" class="active">home</a>
-                    <a href="#news">formação</a>
-                    <a href="#contact">experiência profissional</a>
-                    <a href="#about">intercâmbio</a>
-                    <a href="#about">certificados</a>
-                    <a style="white-space: nowrap;" href="#about">curriculo pdf</a>
-                    <a href="#about">contato</a>
-                    <a href="#about">english</a>
+                    <a href="#nerd">formação</a>
+                    <a href="#xp">experiência profissional</a>
+                    <a href="#pt">intercâmbio</a>
+                    <a href="#se_eu_ganhei_foi_pq_mereci">certificados</a>
+                    <a style="white-space: nowrap;" href="#cv">curriculo pdf</a>
+                    <a href="#cant_touch_this">contato</a>
+                    <a href="#">english</a>
                     <a href="javascript:void(0);" class="icon" onclick="openNav()">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -192,8 +204,32 @@
             
     
             
-            <main onclick="closeNav()" class="row">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quidem, ex esse labore cum fugit saepe nobis sit ut. Eligendi doloremque tenetur eius reiciendis distinctio provident facere impedit sequi aspernatur? Soluta ad praesentium laboriosam sapiente labore dolores veniam numquam culpa adipisci aut, cupiditate, libero quia magni eaque est veritatis rerum vel ab! Saepe dolorem fugit quibusdam expedita autem, illum enim reiciendis ipsa quos praesentium minima magni adipisci qui quisquam nam rerum officia molestiae repellat doloremque a voluptatibus itaque labore vel. Quia numquam dignissimos error reiciendis laudantium dolores sapiente obcaecati animi dolore illum quo debitis exercitationem eum nam, vel placeat hic!</p>
+            <main onclick="closeNav()" class="row" >
+
+                <section id="home">
+
+                </section>
+
+                <section id="nerd">
+
+                </section>
+
+                <section id="xp">
+
+                </section>
+
+                <section id="pt">
+
+                </section>
+
+                <section id="se_eu_ganhei_foi_pq_mereci">
+
+                </section>
+
+                <section id="cant_touch_this">
+
+                </section>
+
             </main>
     
     
