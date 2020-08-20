@@ -69,6 +69,7 @@
             background-color: var(--azul);
             color: white;
             text-align: center;
+            transition: 0.5s;
         }
 
 
@@ -308,7 +309,7 @@
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <form class="text-center p-5" action="contato.php">
+                                    <form class="text-center p-5" method="post" action="contato.php">
 
                                         <h4 class="mb-3 text-left text-white">fala comigo!</h4>
 
@@ -393,6 +394,8 @@
                 document.querySelector("#pagina").style.marginLeft = "-250px";
                 document.querySelector("#myTopnav").style.marginRight = "250px";
                 document.querySelector("#myTopnav").style.marginLeft = "-250px";
+                document.querySelector(".footer").style.marginRight = "250px";
+                document.querySelector(".footer").style.marginLeft = "-250px";
                 
             }
         }
@@ -406,6 +409,8 @@
                 document.querySelector("#pagina").style.marginLeft = "0";
                 document.querySelector("#myTopnav").style.marginRight = "0";
                 document.querySelector("#myTopnav").style.marginLeft = "0";
+                document.querySelector(".footer").style.marginRight = "0";
+                document.querySelector(".footer").style.marginLeft = "0";
             } 
         }
 
