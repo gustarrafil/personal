@@ -54,6 +54,10 @@
             padding: 0;
             overflow-x: hidden;
         }
+        #myTopnav {
+            transition: 0.5s;
+        }
+        
 
         
 
@@ -99,7 +103,11 @@
 
         /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
         @media screen and (max-width: 800px) {
-            .topnav a:not(:first-child) {display: none;}
+            .topnav {
+                z-index: 10;
+            }
+            /* .topnav a:not(:first-child) {display: none;} */
+            .topnav a {display: none;}
             .topnav a.icon {
                 float: right;
                 display: block;
@@ -126,6 +134,24 @@
                 /* display: block; */
                 transition: 0.3s;
             }
+            .tela-menor {
+                display: none;
+            }
+            .footer {
+                position: fixed;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            /* section {
+                height: 600px;
+            } */
+            #home-conteudo {
+                padding: 150px 0;
+            }
+            #social {
+                margin: 50px auto;
+            }
         }
 
         
@@ -151,9 +177,7 @@
             }
         }
 
-        section {
-            height: 2000px;
-        }
+        
         
 
     </style>
@@ -165,20 +189,22 @@
         <div class="row d-flex justify-content-end">
             <ul class="pr-4">
                 <li>
-                    <a href="javascript:void(0)" class="" onclick="closeNav()"><i class="fas fa-times"></i></a>
+                    <a href="javascript:void(0);" class="icon" onclick="closeNav()">
+                        <i style="font-size: 20px;" class="fas fa-times"></i>
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="row ">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">formação</a></li>
-                <li><a href="#">experiência<br>profissional</a></li>
-                <li><a href="#">intercâmbio</a></li>
-                <li><a href="#">certificados</a></li>
-                <li><a style="white-space: nowrap;" href="#">curriculo pdf</a></li>
-                <li><a href="#">contato</a></li>
-                <li><a href="#">english</a></li>
+            <ul style="line-height: 3em;">
+                <li><a href="#home">> ínicio</a></li>
+                <!-- <li><a href="#nerd">> formação</a></li>
+                <li><a href="#xp">> experiência<br>profissional</a></li>
+                <li><a href="#pt">> intercâmbio</a></li>
+                <li><a href="#se_eu_ganhei_foi_pq_mereci">> certificados</a></li>
+                <li><a style="white-space: nowrap;" href="#">> curriculo pdf</a></li> -->
+                <li><a href="#cant_touch_this">> contato</a></li>
+                <!-- <li><a href="#">> english</a></li> -->
             </ul>
         </div>
     </div>
@@ -187,15 +213,15 @@
 
         <div id="pagina">
             <div class="row" >
-                <div class="topnav" id="myTopnav" style="margin: 0;">
-                    <a href="#home" class="active">home</a>
-                    <a href="#nerd">formação</a>
+                <div class="topnav" id="myTopnav" >
+                    <a href="#home">início</a>
+                    <!-- <a href="#nerd">formação</a>
                     <a href="#xp">experiência profissional</a>
                     <a href="#pt">intercâmbio</a>
                     <a href="#se_eu_ganhei_foi_pq_mereci">certificados</a>
-                    <a style="white-space: nowrap;" href="#cv">curriculo pdf</a>
+                    <a style="white-space: nowrap;" href="#cv">curriculo pdf</a> -->
                     <a href="#cant_touch_this">contato</a>
-                    <a href="#">english</a>
+                    <!-- <a href="#">english</a> -->
                     <a href="javascript:void(0);" class="icon" onclick="openNav()">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -207,27 +233,103 @@
             <main onclick="closeNav()" class="row" >
 
                 <section id="home">
-
+                    <div class="row text-white">
+                        
+                            <div id="home-conteudo" class="col-sm-12 col-md-8 col-lg-8">
+                                <div class="row d-flex justify-content-center text-center">
+                                    <h1>Olá!</h1>
+                                </div>
+                                <div class="row d-flex justify-content-center text-center">
+                                    <h1>Eu sou o Gustavo.</h1>
+                                </div>
+                                <div class="row d-flex justify-content-center text-center">
+                                    <h2>aluno de Sistemas de Informação</h2>
+                                </div>
+                                <div class="row tela-menor">
+                                    <h3>desejo que todos tenham uma experiência agradável lidando com sua tecnologia</h3>
+                                </div>
+                            </div>
+                    </div>
                 </section>
 
-                <section id="nerd">
-
+                <!-- <section id="nerd">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <p>atualmente sou aluno de sistemas de informacao da faculdade de tecnologia da unicamp, em limeira</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="xp">
-
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <p>estagiario de desewvolvimento no itau unibanco em mogi mirim</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="pt">
-
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <p>em 2019/2020 eu fui pra portugal pra fazer um intercambio academico universitario</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="se_eu_ganhei_foi_pq_mereci">
-
-                </section>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <p>algumas coisa que eu fiz aqu durante a vida</p>
+                        </div>
+                    </div>
+                </section> -->
 
                 <section id="cant_touch_this">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <div class="row">
+                                
+                                <div id="social" class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <div>
+                                            <img style="border-radius: 50%;" src="social_media.png" alt="gustavo em frente ao palácio de buckingham prestes a ver a troca da guarda da rainha da Inglaterra">
+                                        </div>
 
+                                    </div>
+                                    <div class="row">
+                                        <div class="col d-flex justify-content-center">
+                                            <a style="color: white; font-size: 50px;" href="https://twitter.com/gustarrafil"><i class="fab fa-twitter-square"></i></a>
+                                        </div>
+                                        <div class="col d-flex justify-content-center">
+                                            <a style="color: white; font-size: 50px;" href="https://github.com/gustarrafil"><i class="fab fa-github-square"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <form class="text-center p-5" action="contato.php">
+
+                                        <h4 class="mb-3 text-left text-white">fala comigo!</h4>
+
+                                        <input type="text" id="defaultLoginFormEmail" name="name" class="form-control mb-4" placeholder="seu nome">
+                                    
+                                        <input type="email" id="defaultLoginFormPassword" name="email" class="form-control mb-4" placeholder="seu e-mail">
+
+                                        <div class="form-group">
+                                            
+                                            <textarea name="message" placeholder="sua mensagem :D" class="form-control rounded-1" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                        </div>
+                                        
+                                        <button style="background-color: var(--azul);color: white;text-transform: lowercase;" class="btn btn-block my-4" type="submit"><h5>toca aqui pra mandar</h5></button>
+
+                                        
+                                    </form>
+                                    <!-- Default form login -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
             </main>
@@ -235,7 +337,31 @@
     
             <div class="row">
                 <div class="footer">
-                    <p>Footer</p>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <a style="color: white;" href="https://twitter.com/gustarrafil">@gustarrafil</a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <a style="color: white;" href="https://github.com/gustarrafil">github/gustarrafil</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div>
+                                <a style="color: white;" href="mailto:gustavotarrafil@gmail.com">gustavotarrafil@gmail.com</a>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -265,6 +391,9 @@
                 document.querySelector("#mySidebar").style.width = "250px";
                 document.querySelector("#pagina").style.marginRight = "250px";
                 document.querySelector("#pagina").style.marginLeft = "-250px";
+                document.querySelector("#myTopnav").style.marginRight = "250px";
+                document.querySelector("#myTopnav").style.marginLeft = "-250px";
+                
             }
         }
 
@@ -275,6 +404,8 @@
                 document.querySelector("#mySidebar").style.width = "0";
                 document.querySelector("#pagina").style.marginRight = "0";
                 document.querySelector("#pagina").style.marginLeft = "0";
+                document.querySelector("#myTopnav").style.marginRight = "0";
+                document.querySelector("#myTopnav").style.marginLeft = "0";
             } 
         }
 
