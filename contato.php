@@ -1,37 +1,26 @@
 <?php
-if(!isset($_POST['submit'])) {
-    echo "error";
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+/*
+Tested working with PHP5.4 and above (including PHP 7 )
 
-if (isset($_POST['name']) && isset($_POST['email'])) {
+ */
+require_once './vendor/autoload.php';
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $to = "gustavotarrafil@gmail.com";
-    $subject = "alguem chamou no site";
-    $message = $_POST['message'];
-    $body = " ".$message." ";
-    $headers = "From: ".$name." <".$email.">\r\n";
-    $headers .= "Reply-To: ".$email."\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset-utf-8";
+use FormGuide\Handlx\FormHandler;
 
-    
 
-    if(empty($name)||empty($visitor_email)) {
-        echo "preciso saber quem é você...";
-        exit;
-    }
-    else {
-        $send = mail($to, $subject, $body, $headers);
-        if ($send) {
-            echo "obrigado";
-        } else {
-            echo "erro ao mandar";
-        }
-    }
+$pp = new FormHandler();
 
-}
+$validator = $pp->getValidator();
+$validator->fields(['name','email'])->areRequired()->maxLength(50);
+$validator->field('email')->isEmail();
+$validator->field('comments')->maxLength(6000);
 
-?>
-<?php  ?>
+
+
+
+$pp->sendEmailTo('gustavotarrafil@gmail.com'); // ← Your email here
+
+echo $pp->process($_POST);
