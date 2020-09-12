@@ -1,0 +1,113 @@
+* {
+    font-family: 'Noto Sans';
+    /* modern serif para impressao
+    san-serif para pdf */
+}
+a:hover {
+    text-decoration: none;
+}
+
+
+
+  @page {
+      width: 210mm;
+      height: 297mm;
+  }
+@media print {
+    #pagina[size="A4"] {
+        background: white;
+        width: 21cm;
+        height: 29.7cm;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+      }
+}
+/* #pagina {
+    height: 297mm;
+    width: 210mm;
+    background-color: rgb(165, 240, 165);
+} */
+
+header {
+
+    height: 10mm;
+    background-color: gray;
+}
+
+
+
+
+
+
+.titulo {
+    border-bottom: 2px solid gray;
+}
+
+
+
+.icone {
+    width: 20px;
+}
+
+footer {
+    height: 10mm;
+    background-color: gray;
+}
+
+h1 {
+    font-size: 25px;
+    
+}
+h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(126, 126, 226);
+}
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+}
+h4 {
+    font-size: 18px;
+    color: gray!important;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    color: rgb(100, 100, 100)!important;
+}
+
+.row, .col {
+    margin:0!important;
+    padding:0!important;
+}
+
+#primeira {
+    background-color: blue;
+}
+
+/* .box {
+    height: 100%;
+    width: 10px;
+} */
+.y {
+    background-color: rgb(126, 126, 226);
+}
+.n {
+    background-color: white;
+}
+#habilidades p {
+    color: black !important;
+}
+#habcont>div {
+    margin-bottom: 7px!important;
+}
+#habcont>div .col .row .col {
+    margin-left: 3px!important;
+}
+
