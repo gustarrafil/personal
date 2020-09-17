@@ -323,20 +323,20 @@
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <form class="text-center pb-5" method="post" action="contato.php">
+                                    <form class="text-center pb-5" method="post" action="mailto:gustavotarrafil@gmail.com">
 
                                         <h4 class="mb-3 text-left text-white">fala comigo!</h4>
 
-                                        <input type="text" id="defaultLoginFormEmail" name="name" class="form-control mb-4" placeholder="seu nome">
+                                        <input type="text" id="nome_contato" name="name" class="form-control mb-4" placeholder="seu nome">
                                     
-                                        <input type="email" id="defaultLoginFormPassword" name="email" class="form-control mb-4" placeholder="seu e-mail">
+                                        <input type="email" id="email_contato" name="email" class="form-control mb-4" placeholder="seu e-mail">
 
                                         <div class="form-group">
                                             
-                                            <textarea name="message" placeholder="sua mensagem :D" class="form-control rounded-1" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                            <textarea name="message" placeholder="sua mensagem :D" class="form-control rounded-1" id="mensagem_contato" rows="6"></textarea>
                                         </div>
                                         
-                                        <button style="background-color: var(--azul);color: white;text-transform: lowercase;" class="btn btn-block my-4" type="submit"><h5>clica aqui pra mandar</h5></button>
+                                        <button style="background-color: var(--azul);color: white;text-transform: lowercase;" class="btn btn-block my-4" type="submit" onclick="contato()"><h5>clica aqui pra mandar</h5></button>
 
                                         
                                     </form>
@@ -394,6 +394,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         var tamanho_tela = screen.width;
 
@@ -426,6 +427,28 @@
                 document.querySelector(".footer").style.marginRight = "0";
                 document.querySelector(".footer").style.marginLeft = "0";
             } 
+        }
+
+        function contato() {
+            axios.post(
+                'mailto:gustavotarrafil@gmail.com',
+                {
+                    name: $("#nome_contato").value,
+                    email: $("#email_contato").value,
+                    message: $("#mensagem_contato").value
+                },
+                {
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }
+            )
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+    });
         }
 
         
