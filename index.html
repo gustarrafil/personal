@@ -323,20 +323,25 @@
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <form class="text-center pb-5" method="post" >
+                                    <!-- <form action="http://formspree.io/gustarrafil@gmail.com">
+                                        <input type="email" name="_replyto">
+                                        <textarea   name="body"></textarea>
+                                        <input type="submit" value="Send">
+                                    </form> -->
+                                    <form class="text-center pb-5" action="http://formspree.io/gustarrafil@gmail.com">
 
                                         <h4 class="mb-3 text-left text-white">fala comigo! (em breve aqui, mas meu e-mail ta alí embaixo :D)</h4>
 
-                                        <input type="text" id="nome_contato" name="name" class="form-control mb-4" placeholder="seu nome" disabled>
+                                        <input type="text" id="nome_contato" name="name" class="form-control mb-4" placeholder="seu nome" >
                                     
-                                        <input type="email" id="email_contato" name="email" class="form-control mb-4" placeholder="seu e-mail" disabled>
+                                        <input type="email" id="email_contato" name="_replyto" class="form-control mb-4" placeholder="seu e-mail" >
 
                                         <div class="form-group">
                                             
-                                            <textarea name="message" placeholder="sua mensagem :D" class="form-control rounded-1" id="mensagem_contato" rows="6" disabled></textarea>
+                                            <textarea name="body" placeholder="sua mensagem :D" class="form-control rounded-1" id="mensagem_contato" rows="6" ></textarea>
                                         </div>
                                         
-                                        <button style="background-color: var(--azul);color: white;text-transform: lowercase;" class="btn btn-block my-4" type="submit" disabled><h5>clica aqui pra mandar</h5></button>
+                                        <button style="background-color: var(--azul);color: white;text-transform: lowercase;" class="btn btn-block my-4" type="submit" ><h5>clica aqui pra mandar</h5></button>
 
                                         
                                     </form>
@@ -429,27 +434,8 @@
             } 
         }
 
-        function contato() {
-            axios.post(
-                'mailto:gustavotarrafil@gmail.com',
-                {
-                    name: $("#nome_contato").value,
-                    email: $("#email_contato").value,
-                    message: $("#mensagem_contato").value
-                },
-                {
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }
-            )
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-    });
-        }
+        
+        
 
         
       
